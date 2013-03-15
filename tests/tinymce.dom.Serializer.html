@@ -97,8 +97,8 @@ test('Form elements (general)', function() {
 	DOM.setHTML('test', '<label for="test">label</label>');
 	equal(ser.serialize(DOM.get('test')), '<label for="test">label</label>');
 
-	DOM.setHTML('test', '<input type="checkbox" value="test" /><input type="button" /><textarea></textarea>');
-	equal(ser.serialize(DOM.get('test')), '<input type="checkbox" value="test" /><input type="button" /><textarea></textarea>');
+	DOM.setHTML('test', '<input type="checkbox" value="test" /><button type="button"></button><textarea></textarea>');
+	equal(ser.serialize(DOM.get('test')), '<input type="checkbox" value="test" /><button type="button"></button><textarea></textarea>');
 });
 
 test('Form elements (checkbox)', function() {
